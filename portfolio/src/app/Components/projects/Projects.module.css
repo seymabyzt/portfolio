@@ -1,0 +1,9 @@
+.projectsBackground{
+    background: #fff;
+    min-height: 100vh;
+}
+.title{
+    font-family: "HelveticaNeueCyr Light", sans-serif;
+    color: black;
+    padding-top: 100px
+}

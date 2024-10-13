@@ -1,0 +1,10 @@
+.homePage{
+  min-height: 100vh;
+}
+.homeContent{
+  display: flex
+}
+.homeContentRight{
+  display: flex
+}
+

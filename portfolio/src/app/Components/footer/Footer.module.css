@@ -1,0 +1,28 @@
+.customNavbar {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.navbarDevices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: none
+}
+.mobileNavbar{
+    display: none;
+}
+@media screen and (max-width: 720px) {
+    .button {
+        display: block
+    }
+    .mobileNavbar{
+        display: block;
+    }
+    .navbarDevices {
+        display: none
+    }
+}
