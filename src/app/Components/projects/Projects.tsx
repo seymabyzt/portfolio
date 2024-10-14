@@ -15,16 +15,16 @@ export default function Projects () {
         </div>
         <Grid2 container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
   <Grid2 size={6}>
-    <Item>1</Item>
+  <Box sx={{background: '#4d5f', height: '300px', borderRadius: '2.5rem'}}>2</Box>
   </Grid2>
   <Grid2 size={6}>
-    <Item>2</Item>
+    <Box sx={{background: '#4d5f', height: '300px', borderRadius: '2.5rem'}}>2</Box>
   </Grid2>
   <Grid2 size={6}>
-    <Item>3</Item>
+  <Box sx={{background: '#4d5f', height: '300px', borderRadius: '2.5rem'}}>2</Box>
   </Grid2>
   <Grid2 size={6}>
-    <Item>4</Item>
+  <Box sx={{background: '#4d5f', height: '300px', borderRadius: '2.5rem'}}>2</Box>
   </Grid2>
 </Grid2>
      

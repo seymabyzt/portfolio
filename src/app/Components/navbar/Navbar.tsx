@@ -8,6 +8,7 @@ import {useTranslations} from 'next-intl';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ThemeButton from '../Atoms/ThemeButton/ThemeButton';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -46,6 +47,7 @@ export default function Navbar() {
         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
           <TelegramIcon className={styles.button}/>
           <WhatsAppIcon className={styles.button}/>
+          <ThemeButton></ThemeButton>
           <Button
           className={styles.button}
         id="basic-button"
