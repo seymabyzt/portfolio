@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 :root {
@@ -18,6 +19,24 @@
   --ticket-background-color: rgb(255, 255, 255);
   --check-button-color: rgb(227, 222, 233);
   --icon-color: rgb(75, 0, 150);
+  --white: #FFF;
+  --black: #1A1A1A;
+  --grey: #A3A3A3;
+  --grey-light: #F6F6F6;
+  --yellow: #FFDC1F;
+  --blue: #005CFF;
+  --font-default: "HelveticaNeueCyr Roman", sans-serif;
+  --font-light: "HelveticaNeueCyr Light", sans-serif;
+  --transition-speed: cubic-bezier(.28, .11, .32, 1);
+  --transition-fast: .21s var(--transition-speed);
+  --transition-default: .42s var(--transition-speed);
+  --transition-slow: 1.32s var(--transition-speed);
+  --header-spacer: 5rem;
+  --section-spacer: 10rem;
+  --border-default: 0.125rem solid var(--black);
+  --close-size: 2rem;
+  --letter-spacing: -0.05em;
+  --scale-pos: 1.1;
 }
 
 [data-theme="dark"] {
@@ -33,17 +52,12 @@
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
   color: var(--text-color);
   background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  scroll-behavior: smooth;
 }
 
 * {
