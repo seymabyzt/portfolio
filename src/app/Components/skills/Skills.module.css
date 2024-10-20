@@ -1,0 +1,30 @@
+.skillsSection{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    overflow: hidden;
+    justify-items: end;
+    position: relative;
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+}
+.skillsSection h4{
+    font-family: var(--font-openSans);
+    font-size: 2rem
+}
+
+#skills {
+    position: absolute;
+  
+  }
+
+  @keyframes my-animation {
+    0% {
+      left: -100%;
+    }
+    100%{
+      left: 100%;
+    }
+  }
+  

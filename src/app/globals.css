@@ -12,7 +12,7 @@
 }
 
 :root {
-  --background-color: rgb(245, 242, 247);
+  --background-color: rgb(255, 255, 255);
   --text-color: black;
   --button-color: rgb(75, 0, 150);
   --button-text-color: rgb(255, 255, 255);
@@ -25,8 +25,6 @@
   --grey-light: #F6F6F6;
   --yellow: #FFDC1F;
   --blue: #005CFF;
-  --font-default: "HelveticaNeueCyr Roman", sans-serif;
-  --font-light: "HelveticaNeueCyr Light", sans-serif;
   --transition-speed: cubic-bezier(.28, .11, .32, 1);
   --transition-fast: .21s var(--transition-speed);
   --transition-default: .42s var(--transition-speed);

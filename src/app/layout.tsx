@@ -6,14 +6,10 @@ import {getLocale, getMessages} from 'next-intl/server';
 import Navbar from "./Components/navbar/Navbar";
 import Footer from "./Components/footer/Footer";
  
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const openSans= localFont({
+  src: "./fonts/OpenSans-VariableFont_wdth,wght.ttf",
+  variable: "--font-openSans",
   weight: "100 900",
 });
 
@@ -33,10 +29,11 @@ export default async function RootLayout({
   
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${openSans.variable}`}>
       <NextIntlClientProvider messages={messages}>
         <Navbar></Navbar>
           {children}
+          <Footer></Footer>
         </NextIntlClientProvider>
       </body>
     </html>

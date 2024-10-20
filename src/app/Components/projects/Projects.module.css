@@ -1,34 +1,66 @@
-.projectsBackground{
-    background: #fff;
-}
+
 .projectArea{
-    padding: 15px
+    margin-top: 100px;
+    padding: 15px;
+    background-color: var(--grey-light) ;
+    border-radius: 2.5rem;
+}
+.projectAreaTitle{
+    font-family: var(--font-openSans);
+    display: flex;
+    flex-direction:column;
+    color: black;
+    margin: 20px;
 }
 .title{
-    font-family: "HelveticaNeueCyr Light", sans-serif;
-    color: black;
-    padding-top: 100px
+    letter-spacing: var(--letter-spacing);
+    font-size: 4rem;
+    font-weight: 200;
+}
+.subTitle{
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
 }
 .projects{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 20px;
 }
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.1s ease, transform 1s ease;
+    border-radius: 2.5rem;
+    background-color: var(--black);
+    min-height: min-content;
+    margin: 20px 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
 .projectsContent{
     border-radius: 2.5rem;
     background-color: var(--black);
-    min-height: auto
+    min-height: min-content;
+    margin: 20px 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .projectsContentTop{
     width: 100%;
-    height: 80%;
+    height: 70%;
     border-radius: 2.5rem;
     overflow: clip;
     object-fit: cover;
 }
 .projectsContentBottom{
-    min-height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 10px 0;
+    min-height: fit-content;
     padding: 15px;
     color: #fff;
 }
@@ -37,15 +69,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 .projectsImg:hover {
-    scale: var(--scale-pos);
-    transition: var(--transition-default);
+    transform: scale(1.1); /* Increases size by 10% */
 }
 .viewButton {
-    padding: 1.25rem 1.875rem;
-    font-family: var(--font-default);
+    background: unset;
+    width: max-content;
+    border: .0625rem solid var(--white);
+    color: #fff;
+    border-radius: 10px;
+    background: none;
+    padding: 1rem ;
+    font-family: var(--font-openSans);
     font-weight: 400;
     cursor: pointer;
     display: flex;
@@ -62,8 +100,9 @@
     letter-spacing: var(--letter-spacing);
 }
 .viewButton:hover{
-    -webkit-transition: scale var(--transition-default);
+    background: #fff;
     transition: scale var(--transition-default);
+    color: #000000;
 }
 .viewButton span{
     position: relative;
@@ -75,15 +114,61 @@
     width: 1.5rem;
     height: 1.5rem;
     rotate: -135deg;
-    fill: var(--white);
+    fill: var(--yellow);
     position: relative;
     z-index: 3;
 }
-
-
-@media screen and (max-width:460px){
+.projectsContentBottomTitle{
+    font-family: var(--font-openSans);
+    font-size: 1.5rem;
+}
+/* tablet */
+@media screen and (max-width:768px){
+ 
+    .viewButton {
+        padding: 0.3rem 1rem;
+        gap: .1rem;
+        font-size: 0.5rem;
+        line-height: 115%;
+    }
+    .projectsContentBottomTitle{
+        font-family: var(--font-openSans);
+        font-size: 1.2rem;
+    }
+    .title{
+        letter-spacing: var(--letter-spacing);
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    .subTitle{
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: var(--letter-spacing);
+    }
+}
+@media screen and (max-width:600px){
     .projects{
         display: flex;
         flex-direction: column;
+    }
+    .viewButton {
+        padding: 0.3rem 1rem;
+        gap: .1rem;
+        font-size: 0.5rem;
+        line-height: 115%;
+    }
+    .projectsContentBottomTitle{
+        font-family: var(--font-openSans);
+        font-size: 1.2rem;
+    }
+    .title{
+        letter-spacing: var(--letter-spacing);
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    .subTitle{
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: var(--letter-spacing);
     }
 }

@@ -1,0 +1,35 @@
+
+.homeContent{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  .homeContentLeft{
+    padding: 3rem;
+  }
+  .pageTitle{
+    font-size: 8rem;
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 400
+  }
+  .homeContentRight{
+    padding: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .homeContentRightSide{
+    list-style: none;
+    text-align: end;
+  }
+  @media screen and (max-width:600px){
+    .pageTitle{
+      font-size: 2rem;
+      font-family: var(--font-openSans);
+      letter-spacing: var(--letter-spacing);
+      font-weight: 400
+    }
+  
+  }
+  
