@@ -1,3 +1,41 @@
 .casesPage{
     background-color: var(--background-color);
+    min-height: 100vh;
+    padding: 100px 0 75px 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+/* tablet */
+@media (min-width: 850px) and (max-width: 1024px) {
+    .casesPage{
+        padding: 100px 0 75px 0;
+        border-bottom-left-radius: 1.7rem;
+        border-bottom-right-radius: 1.7rem;
+    }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 850px) {
+    .casesPage{
+        padding: 100px 0 75px 0;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+}
+/* mini tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+    .casesPage{
+        padding: 100px 0 75px 0;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+}
+/* telefon */
+@media screen and (max-width: 480px) {
+    .casesPage{
+        padding: 100px 0 75px 0;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+    
 }

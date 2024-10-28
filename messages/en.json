@@ -3,5 +3,25 @@
     "Navbar": {
         "home": "Home",
         "cases": "Cases"
+    },
+    "HomePage": {
+        "title": "FRONTEND DEVELOPER",
+        "subTitle": "Passionate Frontend Developer | HTML, CSS, JavaScript, React.js, Next.js | Creating User Experiences And Innovative Web Solutions.",
+        "design":"design",
+        "cleanCode": "clean code",
+        "responsive": "responsive design",
+        "versionControl": "version control",
+        "userExperience": "user experience",
+        "webAplications": "web applications",
+        "apiEntegration": "api entegration"
+    },
+    "Resume": {
+        "title": "See the resume for further details.",
+        "button": "Download My Resume"
+    },
+    "Footer": {
+        "home": "Home",
+        "cases": "Cases",
+        "finish": "© 2024 | Designed and Developed by Şeyma Bayezit"
     }
   }

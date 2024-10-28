@@ -2,6 +2,26 @@
     
     "Navbar": {
         "home": "Anasayfa",
-        "cases": "Portfolıo"
+        "cases": "Projeler"
+    },
+    "HomePage": {
+        "title": "FRONTEND DEVELOPER",
+        "subTitle": "Ön Uç Geliştiricisi | HTML, CSS, JavaScript, React.js, Next.js | Yenilikçi web çözümleri ve etkileyici kullanıcı deneyimleri tasarlıyorum.",
+        "design":"tasarım",
+        "cleanCode": "temiz dod",
+        "responsive": "responsive tasarım",
+        "versionControl": "versiyon kontrolü",
+        "userExperience": "kullanıcı deneyimi",
+        "webAplications": "web uygulamaları",
+        "apiEntegration": "api entegrasyonu"
+    },
+    "Resume": {
+        "title": "Daha fazla ayrıntı için özgeçmişe bakınız.",
+        "button": "Özgeçmişi İndir"
+    },
+    "Footer": {
+        "home": "Anasayfa",
+        "cases": "Projeler",
+        "finish": "© 2024 | Designed and Developed by Şeyma Bayezit"
     }
   }

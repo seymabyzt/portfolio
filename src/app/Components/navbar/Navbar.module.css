@@ -1,14 +1,53 @@
 .navbar {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--navbar-background);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     position: fixed;
     left: 0;
     right: 0;
-    padding: 0 1rem;
+    z-index: 1000;
+    color: var(--text-color-black);
+}
+.toolbar{
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+}
+.logo{
+    color: var(--text-color-black);
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+}
+.links{
+    display: flex;
+    gap: 10px
+}
+.link{
+    color: var(--text-color-black);
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.langButton{
+    color: var(--text-color-black);
+    background: none;
+    border: none;
+    padding: 10px;
+}
+.menuButton{
+    color: var(--text-color-black);
+    background: none;
 }
 .button{
-    color: black;
+    color: var(--text-color-black);
+    padding-right: 0;
 }
 @media screen and (max-width: 720px) {}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-
+import styles from '@/app/Components/Atoms/ThemeButton/ThemeButton.module.css'
 export default function ThemeButton(): React.JSX.Element {
 
   type Theme = 'light' | 'dark';
@@ -27,7 +27,7 @@ export default function ThemeButton(): React.JSX.Element {
 
   return (
     <>
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} className={styles.themeButton}>
         <DarkModeIcon />
       </button>
     </>

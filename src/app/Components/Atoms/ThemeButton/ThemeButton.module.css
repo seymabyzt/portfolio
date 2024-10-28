@@ -1,0 +1,6 @@
+.themeButton{
+    background: none;
+    border: none;
+    color: var(--text-color-black);
+    display: flex;
+}

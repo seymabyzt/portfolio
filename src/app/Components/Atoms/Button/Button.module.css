@@ -1,0 +1,98 @@
+
+.button {
+    background: unset;
+    width: max-content;
+    border: .0625rem solid var(--white);
+    color: white;
+    border-radius: 10px;
+    background: none;
+    padding: 1rem;
+    font-family: var(--font-openSans);
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: .5rem;
+    position: relative;
+    font-size: 1.125rem;
+    line-height: 115%;
+    letter-spacing: var(--letter-spacing);
+}
+
+.buttonIconWrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--blue);
+    border: 1px solid var(--background-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: var(--background-color);
+    color: var(--text-color-black);
+  }
+  
+  .button:hover .buttonIconWrapper {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+  
+  .buttonIconSvgCopy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .buttonIconSvg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .buttonIconSvgCopy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+  
+/* tablet */
+@media (min-width: 850px) and (max-width: 1024px) {
+  .button {
+    border-radius: 7px;
+    padding: 0.5rem;
+    font-weight: 400;
+    gap: .5rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 115%;
+    letter-spacing: var(--letter-spacing);
+}
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 850px) {
+
+}
+/* mini tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+/* telefon */
+@media screen and (max-width: 480px) {
+  .button {
+    border-radius: 7px;
+    padding: 0.3rem 0.4rem;
+    font-weight: 400;
+    gap: .5rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 115%;
+    letter-spacing: var(--letter-spacing);
+}
+}

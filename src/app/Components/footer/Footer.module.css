@@ -1,28 +1,75 @@
-.customNavbar {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+.footer {
+    background-color: var(--footer-background);
+    min-height: 250px;
+    position: relative;
 }
-.navbarDevices {
+.footerSafari{
+    background-color: var(--footer-background);
+    height: 400px;
+    position: relative;
+}
+.footerContentTopSafari{
+    padding-top: 200px;
     display: flex;
     justify-content: space-between;
+    color: var(--text-color-white)
+}
+.footerContentTop{
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color-white)
+}
+.logo{
+    color: var(--text-color-white);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.footerContentTopLeft{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px
+}
+.footerContentTopRight{
+    display: flex;
+    gap: 10px
+}
+.link{
+    color: var(--text-color-white);
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.footerContentBottom{
+    margin: 50px 0;
+}
+.bottomText{
+    color: var(--text-color-white)
+}
+.footerHref{
+    color: var(--text-color-white)
+}
+.footerIcon{
+    display: flex;
+    justify-content: space-around
 }
 
-.button {
-    display: none
-}
-.mobileNavbar{
-    display: none;
-}
-@media screen and (max-width: 720px) {
-    .button {
-        display: block
+/* @media screen and (max-width: 720px) {
+    .footer {
+        background-color: var(--footer-background);
+        min-height: 250px;
+        position: relative;
     }
-    .mobileNavbar{
-        display: block;
+    .footerSafari{
+        background-color: var(--footer-background);
+        height: 100px;
+        position: relative;
     }
-    .navbarDevices {
-        display: none
+    .footerContentTop{
+        padding-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-color-white)
     }
-}
+} */

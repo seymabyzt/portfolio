@@ -1,26 +1,30 @@
 "use client";
 import { useEffect, useRef } from 'react';
 import styles from '@/app/Components/projects/Projects.module.css';
-import Image from 'next/image';
-import weather from '@/app/public/assets/weather.jpeg';
 import Link from 'next/link';
+import Button from '../Atoms/Button/Button';
+import { ItemData } from '@/app/interfaces/interfaces';
 
-export default function Projects() {
+interface ItemDataProps {
+  data: ItemData[];
+}
+
+const Projects: React.FC<ItemDataProps> = () => {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(styles.show); 
           entry.target.classList.remove(styles.projectsContent); 
         } else {
           entry.target.classList.remove(styles.show); 
           entry.target.classList.add(styles.projectsContent); 
-
         }
       });
     });
+
     projectRefs.current.forEach((project) => {
       if (project) observer.observe(project); 
     });
@@ -29,6 +33,7 @@ export default function Projects() {
       projectRefs.current.forEach((project) => {
         if (project) observer.unobserve(project);
       });
+      observer.disconnect(); // Ekstra güvenlik için observer'ı tamamen kapatın
     };
   }, []);
 
@@ -42,7 +47,7 @@ export default function Projects() {
           </div>
           <div>
             <div className={styles.projects}>
-              {itemData.map((item, index) => (
+              {itemData.map((item: any, index: number) => (
                 <div
                   key={index}
                   className={`${styles.projectsContent}`}
@@ -50,27 +55,15 @@ export default function Projects() {
                     projectRefs.current[index] = el;
                   }}
                 >
-                  <Link href={`/cases-detail/${item.link}`}>
+                  <Link target='blank' href={item.link}>
                     <div className={styles.projectsContentTop}>
-                      <Image
-                        alt="weather"
-                        width={600}
-                        className={styles.projectsImg}
-                        src={item.img}
-                      />
+                      <img width={600} height={400} className={styles.projectsImg}  src={item.image}  alt={item.alt}/>
                     </div>
                     <div className={styles.projectsContentBottom}>
                       <h2 className={styles.projectsContentBottomTitle}>
                         {item.title}
                       </h2>
-                      <p className={styles.description}>{item.description}</p>
-                      <button className={styles.viewButton}>
-                        <span>View case</span>
-                        <svg className={styles.arrow} viewBox="0 0 24 24">
-                          <path d="M10.7186 17.7593L4.83753 11.8782L3.46777 13.248L11.6873 21.4675L12.3722 20.7826L19.9068 13.248L18.537 11.8782L12.656 17.7593L12.656 2.09326H10.7186L10.7186 17.7593Z"></path>
-                          <path d="M10.7186 17.7593L4.83753 11.8782L3.46777 13.248L11.6873 21.4675L12.3722 20.7826L19.9068 13.248L18.537 11.8782L12.656 17.7593L12.656 2.09326H10.7186L10.7186 17.7593Z"></path>
-                        </svg>
-                      </button>
+                      <Button>View Case</Button>
                     </div>
                   </Link>
                 </div>
@@ -82,42 +75,31 @@ export default function Projects() {
     </>
   );
 }
+export default Projects;
 
-const itemData = [
+const itemData =  [
   {
-    img: weather,
+    image: "https://www.seymabayezit.com/assets/hosthub.jpeg",
+    title: 'Bootstrap Examples Hosthub',
+    link: 'https://website-bootstrap-hosthub.vercel.app/',
+    alt: 'Bootstrap Examples Hosthub'
+  },
+  {
+    image: "https://www.seymabayezit.com/assets/imagine.jpeg",
+    title: 'Bootstrap Examples Imagine',
+    link: 'https://bootstrap-imagine.seymabayezit.com/',
+    alt: 'Bootstrap Examples Imagine'
+  },
+  {
+    image: "https://www.seymabayezit.com/assets/e-commerce.jpeg",
+    title: 'E-commerce Website',
+    link: 'https://e-commerce-eta-gules.vercel.app/',
+    alt: 'E-commerce Website'
+  },
+  {
+    image: "https://www.seymabayezit.com/assets/weather.jpeg",
     title: 'Weather App',
-    description: 'This app made for learn weather api',
-    link: 'weather-app',
-  },
-  {
-    img: weather,
-    title: 'Burger',
-    description: '@rollelflex_graphy726',
-    link: 'weather-app',
-  },
-  {
-    img: weather,
-    title: 'Weather App',
-    description: 'This app made for learn weather api',
-    link: 'weather-app',
-  },
-  {
-    img: weather,
-    title: 'Burger',
-    description: '@rollelflex_graphy726',
-    link: 'weather-app',
-  },
-  {
-    img: weather,
-    title: 'Weather App',
-    description: 'This app made for learn weather api',
-    link: 'weather-app',
-  },
-  {
-    img: weather,
-    title: 'Burger',
-    description: '@rollelflex_graphy726',
-    link: 'weather-app',
-  },
+    link: 'https://weatherapp.projectportfolio.site/',
+    alt: 'Weather App'
+  }
 ];

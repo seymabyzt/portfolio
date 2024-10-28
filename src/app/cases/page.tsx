@@ -5,8 +5,13 @@ const page = () => {
     return (
         <>
         <div className={styles.casesPage}>
-        <Container maxWidth="xl">
-            <Projects></Projects>
+        <Container maxWidth={false}
+          sx={{
+            width: '100%',
+            maxWidth: '100vw',
+            padding: '0 16px',
+          }}>
+            <Projects data={[]}></Projects>
         </Container>
         </div>
         </>

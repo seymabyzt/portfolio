@@ -1,35 +1,146 @@
 
 .homeContent{
-    padding-top: 5rem;
+    padding-top: 10rem;
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
+    min-width: 100%;
+    color: var(--text-color);
+    z-index: 10;
   }
   .homeContentLeft{
-    padding: 3rem;
+    width: 55%;
+    padding: 3rem 3rem 3rem 0;
+    color: var(--text-color);
   }
   .pageTitle{
     font-size: 8rem;
     font-family: var(--font-openSans);
     letter-spacing: var(--letter-spacing);
-    font-weight: 400
+    font-weight: 400;
+    color: var(--text-color-black);
+  }
+  .pageSubTitle{
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    color: var(--text-color-black);
+    font-weight: 400;
+    font-size: 1.5rem;
   }
   .homeContentRight{
-    padding: 6rem;
+    width: 45%;
+    padding: 6rem 0 6rem 3rem;
     display: flex;
     justify-content: space-between;
+    color: var(--text-color)
   }
   .homeContentRightSide{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-openSans);
+    letter-spacing: var(--letter-spacing);
+    color: var(--text-color-black);
+    font-weight: 500;
     list-style: none;
     text-align: end;
+    row-gap: 1rem;
   }
-  @media screen and (max-width:600px){
+  .homeContentRightStart{
+    display: flex;
+    position: relative;
+  }
+  .phone{
+    position: absolute;
+    top: -55px;
+    left: 250px;
+    animation: phone 10s  ease-in-out infinite;
+    -moz-animation: phone 10s  ease-in-out infinite;
+    -webkit-animation: phone 10s  ease-in-out infinite;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .pageTitle{
       font-size: 2rem;
       font-family: var(--font-openSans);
       letter-spacing: var(--letter-spacing);
       font-weight: 400
     }
-  
+    .homeContent{
+      display: flex;
+      flex-direction: column;
+    }
+    .homeContentLeft{
+      width: 100%;
+      padding: 1rem 1rem 3rem 0;
+    }
+    .homeContentRight{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 3rem 1rem 1rem 0;
+    }
+    
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .pageTitle{
+      font-size: 2rem;
+      font-family: var(--font-openSans);
+      letter-spacing: var(--letter-spacing);
+      font-weight: 400
+    }
+    .homeContent{
+      display: flex;
+      flex-direction: column;
+    }
+    .homeContentLeft{
+      width: 100%;
+      padding: 1rem 1rem 3rem 0;
+    }
+    .homeContentRight{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 3rem 1rem 1rem 0;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .pageTitle{
+      font-size: 2rem;
+      font-family: var(--font-openSans);
+      letter-spacing: var(--letter-spacing);
+      font-weight: 400
+    }
+    .homeContent{
+      display: flex;
+      flex-direction: column;
+    }
+    .homeContentLeft{
+      width: 100%;
+      padding: 1rem 1rem 4rem 0;
+    }
+    .homeContentRight{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 3rem 1rem 1rem 0;
+    }
+  }
+
+  @keyframes phone {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-75px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    75% {
+      transform: translateX(-75px);
+    }
+    
   }
   
