@@ -1,0 +1,10 @@
+.dropdown{
+    z-index: 1000;
+    background-color: var(--background-color);
+}
+.checkIcon{
+    color: var(--text-color-black)
+}
+.items{
+    color: var(--text-color-black)
+}

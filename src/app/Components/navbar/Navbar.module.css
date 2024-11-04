@@ -23,11 +23,12 @@
 }
 .icons{
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 .links{
     display: flex;
-    gap: 10px
+    gap: 10px;
+    padding-left: 10px;
 }
 .link{
     color: var(--text-color-black);
@@ -36,12 +37,7 @@
     font-weight: 500;
     font-size: 1.2rem;
 }
-.langButton{
-    color: var(--text-color-black);
-    background: none;
-    border: none;
-    padding: 10px;
-}
+
 .menuButton{
     color: var(--text-color-black);
     background: none;

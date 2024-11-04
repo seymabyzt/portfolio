@@ -1,9 +1,14 @@
+'use client';
+
+import {useFormStatus} from 'react-dom';
 import styles from '@/app/Components/Atoms/Button/Button.module.css'
-export default function Button({ children, ...props }: any) {
+export default function Button({ children, showIcon = true, ...props }: any) {
+    const {pending} = useFormStatus();
     return (
         <>
-            <button className={styles.button}>
-                <span {...props}>{children}</span>
+            <button className={styles.button} {...props} disabled={pending}>
+                <span >{children}</span>
+                {showIcon && (
                 <span className={styles.buttonIconWrapper}>
                     <svg
                         viewBox="0 0 14 15"
@@ -31,6 +36,7 @@ export default function Button({ children, ...props }: any) {
                         ></path>
                     </svg>
                 </span>
+                  )}
             </button>
         </>
     )

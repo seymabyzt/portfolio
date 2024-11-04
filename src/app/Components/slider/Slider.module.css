@@ -1,0 +1,22 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+      }
+    100% {
+        transform: translateX(-50%);
+      }
+}
+
+.animation{
+    background-color: black;
+    width: 220px;
+    height: 312px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    animation: scroll 10s linear infinite;
+}
+
+
+
+  

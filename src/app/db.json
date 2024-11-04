@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "3D Design",
+      "image": "/E1D02BFF-E47B-45D0-B286-9A713BEF43C1.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Brand Design",
+      "image": "/3D2E07E7-F6AD-4FCE-933C-D04F39F63502.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Frontend Web Development",
+      "image": "/DD13BC46-8A5F-4241-B088-59D0EDA4B4D7.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Video Editing",
+      "image": "/F481DD8D-E432-4E73-89C7-29F4E4924EC6.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Social Media Management",
+      "image": "/CF1411E7-0876-41C2-8EF5-77D37A867E75.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "SEO Blog Writing",
+      "image": "/4BD5D785-AFA5-46F4-BFB4-1C63467D45D6.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "No-Code Development",
+      "image": "/42E754E0-71EF-4E85-821E-2DEB03B5F1CF.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Animation",
+      "image": "/BB3541B3-3FCC-44E7-8538-3F3BF2E67932.jpeg"
+    },
+    {
+      "id": 9,
+      "title": "Social Content Creation",
+      "image": "/EEEDC0C8-0C1F-4CD1-9137-DF825E4F3561.jpeg"
+    },
+    {
+      "id": 10,
+      "title": "Podcast Production",
+      "image": "/9B341986-FD04-449B-843B-F5E7654B2886.jpeg"
+    }
+  ]
+}

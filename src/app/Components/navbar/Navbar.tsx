@@ -4,11 +4,13 @@ import { Toolbar, IconButton, Typography, Menu, MenuItem, Button, Box, Container
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import styles from '@/app/Components/navbar/Navbar.module.css'
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ThemeButton from '../Atoms/ThemeButton/ThemeButton';
-import LanguageIcon from '@mui/icons-material/Language';
+import LangButton from '../Molecules/langButton/langButton';
+
+
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -20,17 +22,10 @@ export default function Navbar() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-
-  const [anchorEl1, setAnchorEl1] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl1);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl1(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl1(null);
-  };
+  const locale = useLocale();
 
   const t = useTranslations('Navbar');
+
   return (
     <div className={styles.navbar}>
       <Container maxWidth={false}
@@ -49,38 +44,26 @@ export default function Navbar() {
             <Link target="blank" href="https://t.me/Seymazt"> <TelegramIcon className={styles.button} /></Link>
            <Link target="blank" href="https://wa.me/905525279096"> <WhatsAppIcon className={styles.button} /></Link>
             <ThemeButton></ThemeButton>
+            <LangButton defaultValue={locale}
+      items={[
+        {
+          value: 'en',
+          label: 'en'
+        },
+        {
+          value: 'tr',
+          label: 'tr'
+        }
+      ]}></LangButton>
           </div>
-          <button
-            className={styles.langButton}
-            id="basic-button"
-            aria-controls={open ? 'basic-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-            onClick={handleClick}
-          >
-            <LanguageIcon />
-          </button>
           {/* Desktop Links */}
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl1}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'basic-button',
-              }}
-            >
-              <MenuItem onClick={handleClose}>EN</MenuItem>
-              <MenuItem onClick={handleClose}>TR</MenuItem>
-            </Menu>
-
               <div className={styles.links}>
               <Link className={styles.link} href="/" passHref>{t('home')}</Link>
               <Link className={styles.link}  href="/cases" passHref>{t('cases')}</Link>
               </div>
           </Box>
+       
           {/* Mobile Menu Button */}
           <Box sx={{
             display: { xs: 'block', md: 'none' },
